@@ -1,0 +1,284 @@
+% ---------------------------- Problem 1----------------------------------
+\subsubsection*{\center Задача № 1.}
+{\bf Условие.~}
+Дана последовательность $\{a_n\} = \dfrac{2n-1}{2-3n}$ и число $c=-\dfrac{2}{3}$. Доказать, что 
+$$\lim\limits_{n\rightarrow\infty}a_n=c,$$
+а именно, для каждого сколь угодно малого числа $\eps>0$ найти наименьшее натуральное число 
+$N=N(\eps)$ такое, что $|a_n-c|<\eps$ для всех номеров $n>N(\eps)$.
+Заполнить таблицу
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & & & \\
+		\hline
+	\end{tabular}
+\end{center}
+{\bf Решение.~}	
+Рассмотрим неравенство $a_n-c<\eps,\,\forall\eps>0$, учитывая выражение для $a_n$ и значение $c$ из условия варианта,
+получим
+$$
+\begin{array}{c}
+\biggl|\dfrac{2n-1}{2-3n}+\dfrac23\biggr| < \eps,     \\[8pt]
+\biggl|\dfrac{1}{3(3n-2)}\biggr| < \eps. 			  \\[8pt]	        
+\end{array}
+$$
+Неравенство запишем в виде двойного неравентсва и приведём выражение под знаком модуля к общему знаменателю,
+получим
+$$
+-\eps < \frac{1}{3(3n-2)} < \eps.
+$$
+Заметим, что левое неравенство выполнено для любого номера $n\in\mathbb{N}$ поэтому, будем рассматривать правое неравенство 
+$$
+\frac{1}{3(3n-2)} < \eps.
+$$
+Выполнив цепочку преобразований, перепишем неравенство относительно $n^2$, и учитывая, что $n\in\mathbb{N}$, получим
+$$
+\begin{array}{c}
+\dfrac{1}{3(3n-2)} < \eps, 							\\[8pt]
+\dfrac{1}{3\eps} < 3n-2, 							\\[8pt]
+n > \dfrac{1}{3}\biggl(2+\dfrac{1}{3\eps}\biggr) , 		\\[8pt]
+N(\eps) = \Biggl[\dfrac{1}{3}\biggl(2+\dfrac{1}{3\eps}\biggr)\Biggr].
+\end{array}
+$$
+где $[\phantom{a}]$ --- целая часть числа.
+Заполним таблицу:
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\eps$ &  $0{,}1$ & $0{,}01$ & $0{,}001$ \\
+		\hline
+		$N(\eps)$ & 1 & 11 & 111 \\
+		\hline
+	\end{tabular}
+\end{center}
+\textbf{Проверка:}
+$$
+\begin{array}{l}
+|a_2 - c| = \dfrac{1}{12} < 0{,}1,			\\[10pt]
+|a_{12} - c| = \dfrac{1}{102} < 0{,}01,	\\[10pt]
+|a_{112} - c| = \dfrac{1}{1002} < 0{,}001.
+\end{array}
+$$
+
+% ---------------------------- Problem 2----------------------------------
+\subsubsection*{\center Задача № 2.}
+{\bf Условие.~}
+Вычислить пределы функций
+$$
+\begin{array}{cc}
+\text{\bf(а):} & \lim\limits_{x\rightarrow-1}\dfrac{x^4+2x^3-x^2-4x-2}{x^3+3x^2+3x+1}, \\[10pt]
+\text{\bf(б):} & \lim\limits_{x\rightarrow+\infty}\dfrac{3x^2-x+1}{\sqrt[3]{x^6+x}+\sqrt{1+x^4}}, \\[10pt]
+\text{\bf(в):} & \lim\limits_{x\rightarrow-8}\dfrac{\sqrt{1-x}-3}{2+\sqrt[3]{x}}, \\[10pt]
+\text{\bf(г):} & \lim\limits_{x\rightarrow1}\biggl(\dfrac{3x-1}{x+1}\biggr)^{\frac{1}{\sqrt[3]{x}-1}}, \\[10pt]
+\text{\bf(д):} & \lim\limits_{x\rightarrow0}\biggl(\dfrac{x+2}{x+1}\biggr)^{\frac{\arcsin{x}}{2^x-1}}, \\[10pt]
+\text{\bf(е):} & \lim\limits_{x\rightarrow3\pi}\dfrac{2^x-8^\pi}{\sin{7x}-\sin{3x}}.
+\end{array}
+$$
+{\bf Решение.~}\\
+\text{\bf(а):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow-1}\dfrac{x^4+2x^3-x^2-4x-2}{x^3+3x^2+3x+1} =
+\lim\limits_{x\rightarrow-1}\dfrac{(x^2-2)(x+1)^2}{(x+1)^3} = 
+\lim\limits_{x\rightarrow-1}\dfrac{x^2-2}{x+1} = 
+\biggl[\dfrac{-1}{0}\biggr] = -\infty.
+\end{array}
+$$	
+\text{\bf(б):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow+\infty}\dfrac{3x^2-x+1}{\sqrt[3]{x^6+x}+\sqrt{1+x^4}} =
+\lim\limits_{x\rightarrow+\infty}\dfrac{3-\frac{1}{x}+\frac{1}{x^2}}{\sqrt[3]{1+\frac{1}{x^5}}+\sqrt{\frac{1}{x^4}+1}} = \dfrac{3}{2}
+\end{array}
+$$	
+\text{\bf(в):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow-8}\dfrac{\sqrt{1-x}-3}{2+\sqrt[3]{x}} =
+\lim\limits_{x\rightarrow-8}\dfrac{(\sqrt{1-x}-3)(\sqrt{1-x}+3)(4-2\sqrt[3]{x}+\sqrt[3]{x^2})}{(2+\sqrt[3]{x})(\sqrt{1-x}+3)(4-2\sqrt[3]{x}+\sqrt[3]{x^2})} = \\
+\lim\limits_{x\rightarrow-8}\dfrac{(-x-8)(4-2\sqrt[3]{x}+\sqrt[3]{x^2})}{(x+8)(2+\sqrt[3]{x})} =
+-\lim\limits_{x\rightarrow-8}\dfrac{(4-2\sqrt[3]{x}+\sqrt[3]{x^2})}{(2+\sqrt[3]{x})} = \dfrac{-12}{6} = -2
+\end{array}
+$$
+\text{\bf(г):}	
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow1}\biggl(\dfrac{3x-1}{x+1}\biggr)^{\frac{1}{\sqrt[3]{x}-1}} = 
+\biggl[1^\infty\biggr] = 
+e^{\lim\limits_{x\rightarrow1}(\frac{3x-1}{x+1}-1)(\frac{1}{\sqrt[3]{x}-1})} = 
+e^{\lim\limits_{x\rightarrow1}(\frac{2(x-1)}{x+1})(\frac{\sqrt[3]{x^2}+\sqrt[3]{x}+1}{x-1})} = \\
+e^{\lim\limits_{x\rightarrow1}(\frac{2(\sqrt[3]{x^2}+\sqrt[3]{x}+1)}{x+1})} = 
+e^{3}.
+\end{array}
+$$
+\text{\bf(д):}
+$$
+\lim\limits_{x\rightarrow0}\biggl(\dfrac{x+2}{x+1}\biggr)^{\frac{\arcsin{x}}{2^x-1}} = 
+\biggl|
+\begin{array}{l}
+\arcsin{x} \sim x	\\ 
+2^x-1 \sim x\ln{2}
+\end{array}
+\biggr| =
+\lim\limits_{x\rightarrow0}\biggl(\dfrac{x+2}{x+1}\biggr)^{\frac{x}{x\ln{2}}} = 
+\lim\limits_{x\rightarrow0}2^{\frac{x}{x\ln{2}}} = 
+2^{\frac{1}{\ln{2}}}
+$$
+
+\text{\bf(е):}
+$$
+\begin{array}{l}
+\lim\limits_{x\rightarrow3\pi}\dfrac{2^x-8^\pi}{\sin{7x}-\sin{3x}} = 
+\biggl|
+\begin{array}{ll}
+t = x - 3\pi & \sin(7(t+3\pi)) = -\sin(7t)	\\ 
+t\rightarrow0 & \sin(3(t+3\pi)) = -\sin(3t)
+\end{array}
+\biggr| =
+\lim\limits_{t\rightarrow0}\dfrac{8^\pi(2^t-1)}{\sin{3t}-\sin{7t}} = \\
+\lim\limits_{t\rightarrow0}\dfrac{8^\pi(2^t-1)}{-2\cos{5t}\sin{2t}}
+= \biggl|
+\begin{array}{l}
+\sin{2t} \sim 2t	\\ 
+2^t-1 \sim t\ln{2}
+\end{array}
+\biggr| =
+- \lim\limits_{t\rightarrow0}\dfrac{8^\pi(t\ln{2})}{4t} = 
+-\dfrac{8^\pi\ln2}{4}
+\end{array}
+$$
+
+
+% ---------------------------- Problem 3----------------------------------
+\subsubsection*{\center Задача № 3.}
+{\bf Условие.~}\\
+\text{\bf(а):} Показать, что данные функции
+$f(x)$ и $g(x)$ являются бесконечно малыми или бесконечно большими
+при указанном стремлении аргумента. \\
+\text{\bf(б):} Для каждой функции $f(x)$ и $g(x)$ записать главную часть
+(эквивалентную ей функцию)  вида $C(x-x_0)^{\alpha}$ при $x\rightarrow x_0$ или $Cx^{\alpha}$
+при $x\rightarrow\infty$, указать их порядки малости (роста). \\
+\text{\bf(в):} Сравнить функции $f(x)$ и $g(x)$ при указанном стремлении.
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		№ варианта & функции $f(x)$ и $g(x)$ & стремление \\[6pt]
+		%\hline
+		20 & $f(x) = x^3 + \arcsin{x},~g(x)=\sqrt{1-3x}-\sqrt{1+x}$ & $x\rightarrow0$ \\
+		\hline
+	\end{tabular}
+\end{center}
+{\bf Решение.~}\\
+\text{\bf(а):}~Покажем, что $f(x)$ и $g(x)$ бесконечно малые функции,
+$$
+\begin{array}{cc}
+\lim\limits_{x\rightarrow0}f(x) = \lim\limits_{x\rightarrow0}(x^3 + \arcsin{x}) = 0. \\
+\lim\limits_{x\rightarrow0}g(x) = \lim\limits_{x\rightarrow0}(\sqrt{1-3x}-\sqrt{1+x}) = 0.
+\end{array}
+$$	
+\text{\bf(б):}~Так как $f(x)$ и $g(x)$ бесконечно малые функции, то эквивалентными им будут функции вида 
+$Cx^{\alpha}$ при $x\rightarrow0$. Найдём эквивалентную для $f(x)$ из условия
+$$
+\lim\limits_{x\rightarrow0}\dfrac{f(x)}{x^{\alpha}} = C,
+$$
+где $C$ --- некоторая константа. Рассмотрим предел
+$$
+\lim\limits_{x\rightarrow0}\dfrac{f(x)}{x^{\alpha}} = 
+\lim\limits_{x\rightarrow0}\dfrac{x^3 + \arcsin{x}}{x^{\alpha}} =
+\{\text{при}~\alpha=1\} =
+\lim\limits_{x\rightarrow0}x^2 + \lim\limits_{x\rightarrow0}\dfrac{\arcsin{x}}{x} = 1.
+$$
+Отсюда $C=1$, $\alpha=1$ и 
+$$
+f(x)\sim x~\text{при}~x\rightarrow0.
+$$
+Аналогично, рассмотрим предел
+$$
+\lim\limits_{x\rightarrow0}\dfrac{g(x)}{x^{\alpha}} = 
+\lim\limits_{x\rightarrow0}\dfrac{\sqrt{1-3x}-\sqrt{1+x}}{x^{\alpha}} =
+\lim\limits_{x\rightarrow0}\dfrac{-4x}{x^{\alpha}(\sqrt{1-3x}+\sqrt{1+x})} =
+\{\text{при}~\alpha=1\} = -2.
+$$
+Отсюда $C=-2$, $\alpha=1$ и 
+$$
+g(x)\sim -2x~\text{при}~x\rightarrow0.
+$$
+\text{\bf(в):}~Для сравнения функций $f(x)$ и $g(x)$ рассмотрим предел их отношения при указанном стремлении
+$$
+\lim\limits_{x\rightarrow0}\dfrac{f(x)}{g(x)}.
+$$
+Применим эквивалентности, определенные в пункте (б), получим
+$$
+\lim\limits_{x\rightarrow0}\dfrac{f(x)}{g(x)} = 
+\lim\limits_{x\rightarrow\infty}\dfrac{x}{-2x} = 
+-\dfrac{1}{2}.  
+$$
+Отсюда, $f(x)$ и $g(x)$ - бесконечно малые функции одного порядка малости при $x\rightarrow0$.
+
+% ---------------------------- Problem 4----------------------------------
+\subsubsection*{\center Задача № 4.}
+{\bf Условие.~}\\
+Найти точки разрыва функции 
+$$
+y = f(x) \equiv 
+\begin{cases}
+\arcctg(\dfrac{1}{x}),				&\quad x\leqslant1, \\
+\dfrac{1}{(x-2)\ln{x}},             &\quad x>1.
+\end{cases}
+$$ 
+и определить их характер. Построить фрагменты графика функции в окрестности каждой точки разрыва. \\
+{\bf Решение.~}	
+Особыми точками являются точки $x=0,1,2$. Рассмотрим односторонние пределы в окресности каждой из особых точек
+$$
+\begin{array}{lll}
+\lim\limits_{x\rightarrow 0-} \arcctg(\dfrac{1}{x}) = \pi , &
+\lim\limits_{x\rightarrow 1-} \arcctg(\dfrac{1}{x}) = \dfrac{\pi}{4}, &
+\lim\limits_{x\rightarrow 2-} \dfrac{1}{(x-2)\ln{x}} = -\infty.
+\\[6pt]
+\lim\limits_{x\rightarrow 0+} \arcctg(\dfrac{1}{x}) = 0, &
+\lim\limits_{x\rightarrow 1+} \dfrac{1}{(x-2)\ln{x}} = -\infty, &
+\lim\limits_{x\rightarrow 2+} \dfrac{1}{(x-2)\ln{x}} = +\infty.
+\end{array}
+$$
+\begin{center}
+	\begin{tikzpicture}
+	\def\func{rad(90-atan(pow(\x,-1)))} 
+	
+	\begin{axis}[xmin=-13,
+	xmax=9.5, 
+	ymin=0,
+	ymax=3.5,
+	width=\textwidth,
+	height=0.75\textwidth,
+	axis x line=middle,
+	axis y line=middle, 
+	every axis x label/.style={at={(current axis.right of origin)},anchor=west},
+	every inner x axis line/.append style={|-latex'},
+	every inner y axis line/.append style={|-latex'},
+	restrict y to domain = -10:10,
+	minor tick num=1,			
+	axis equal=true,
+	xlabel=$x$, 
+	ylabel=$y$,          
+	samples=600,
+	clip=true,
+	]
+	\addplot[color=black, line width=1.5pt,domain=-10.75:0] {\func};
+	\addplot[color=black, line width=1.5pt,domain=0:1]{\func};
+	\addplot[color=black, line width=1.5pt,domain=1:9.5]{1/((ln(x)*(x-2)))};
+	\addplot[
+	mark=*,
+	mark options={fill=black, draw=black},
+	only marks,
+	] coordinates {(1, pi/4)};
+	
+    \draw[dashed] ({axis cs:2,0}|-{rel axis cs:0,0}) -- ({axis cs:2,0}|-{rel axis cs:0,1});
+    \draw[dashed] ({axis cs:1,0}|-{rel axis cs:0,0}) -- ({axis cs:1,0}|-{rel axis cs:0,1});
+	
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
+Отсюда, точка $x = 0$ --- точка неустранимого разрыва 1--го рода, точка $x = 1$ --- точка
+разрыва 2--го рода, точка $x = 2$ --- точка разрыва 2--го рода.
