@@ -1,4 +1,4 @@
-# Практика
+# Практика 1 курс
 
-[Практика](https://github.com/arsanii/prac/tree/master/prac)
+[Файлы](https://github.com/arsanii/prac/tree/master/prac)
 
